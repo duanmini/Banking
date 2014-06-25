@@ -1,0 +1,21 @@
+library(shiny)
+
+shinyUI(fluidPage(
+  titlePanel("Text Classify Demo"),
+  sidebarLayout(
+    sidebarPanel( 
+     numericInput("rows", 
+                "Records", 
+                min = 1,
+                max = 4000, 
+                value = 3280)  ,
+    helpText("Note: Please keep on waiting for about 1 minute~~ Let's stay tune!")  
+                
+   ) ,     
+    mainPanel( 
+#     h4("Plot"),
+     plotOutput("plot")  
+    )
+  )
+ )
+)
